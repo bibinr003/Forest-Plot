@@ -1,6 +1,9 @@
-Explaining the R Forest Plot Script (Line-by-line)
+Explaining the R Forest Plot Script for even a beginner or a non-programmer (Line-by-line)
 
-Purpose: This document explains every section and important line of the R script you provided. It is written for someone who does not program, using simple language and short examples. At the end there are tips on how to change common settings (e.g., file paths, colors, and groups).
+The input data was from an AQI and Pollutant impact research related to a heart development study from a hospital
+#the example data is different from the true study outcomes 
+
+Purpose: This document explains every section and important line of the R script you provided. It is written for someone who does not program, using simple language and short examples. At the end, there are tips on how to change common settings (e.g., file paths, colors, and groups).
 1. Top: Libraries — “tools the script needs”
 Code lines:
 
@@ -50,7 +53,7 @@ df <- df %>% filter(`ADJUSTED OR` != "_")
 
 - This removes rows where the ADJUSTED OR column has an underscore "_" (used to mark missing/empty values).
 
-Example: If a row has "_" meaning there was no OR calculated for that exposure, it gets removed before plotting.
+Example: If a row has "_", meaning there was no OR calculated for that exposure, it gets removed before plotting.
 5. Extract numeric OR and 95% CI from the ADJUSTED OR text
 Code lines:
 
