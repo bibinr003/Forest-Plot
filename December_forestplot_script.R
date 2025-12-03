@@ -8,13 +8,13 @@ library(stringr)
 library(grid)
 
 # ---------------- USER MUST EDIT ONLY THESE ----------------
-file_path  <- "C:/Users/Bibin/Downloads/Forestplot_AQI_study_22_november.xlsx"
-#sheet_name <- "complexXcontrols"
+file_path  <- "C:/Users/Downloads/Forestplot_AQI_study.xlsx"
+sheet_name <- "complexXcontrols"
 #sheet_name <- "all_cases"
 #sheet_name <- "cyanotic"
-sheet_name <- "acyanotic"
+#sheet_name <- "acyanotic"
 #sheet_name <- "simpleXcontrols"
-output_SVG_file <- paste0("C:/Users/Bibin/Downloads/Mahima/Nov22_", sheet_name, ".svg")
+output_SVG_file <- paste0("C:/Users/Downloads/Nov22_", sheet_name, ".svg")
 # -----------------------------------------------------------
 
 df <- read_excel(file_path, sheet = sheet_name)
@@ -190,3 +190,4 @@ fp <- do.call(fp_set_zebra_style, args = args_list)
 svg(output_SVG_file, width = 11, height = 12)
 print(fp)   # print method draws the forestplot object with zebra styles
 dev.off()
+
