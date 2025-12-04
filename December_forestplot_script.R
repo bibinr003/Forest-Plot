@@ -1,5 +1,5 @@
 # ============================================================
-# Forest Plot for Exposure Windows (Corrected & Final)
+# Forest Plot for Exposure Windows ( Final)
 # ============================================================
 library(readxl)
 library(forestplot)
@@ -190,4 +190,5 @@ fp <- do.call(fp_set_zebra_style, args = args_list)
 svg(output_SVG_file, width = 11, height = 12)
 print(fp)   # print method draws the forestplot object with zebra styles
 dev.off()
+
 
